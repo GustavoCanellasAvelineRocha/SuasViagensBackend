@@ -1,5 +1,5 @@
 package com.br.SuasViagens.domain.viagem;
 
-public class ViagemServiceImp {
+public class TravelServiceImp {
 
 }

@@ -1,11 +1,11 @@
 package com.br.SuasViagens.domain.viagem;
 
-import com.br.SuasViagens.domain.usuario.Usuario;
+import com.br.SuasViagens.domain.usuario.User;
 
 import java.util.List;
 
-public record ViagemDTO(String id,
-                        Usuario usuario,
+public record TravelDTO(String id,
+                        User user,
                         String destino,
                         String duracao,
                         String modoDeTransporte,

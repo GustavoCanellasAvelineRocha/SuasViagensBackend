@@ -1,6 +1,6 @@
 package com.br.SuasViagens.domain.viagem;
 
-import com.br.SuasViagens.domain.usuario.Usuario;
+import com.br.SuasViagens.domain.usuario.User;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,22 +13,20 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Builder
-public class Viagem {
+public class Travel {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
     @JoinColumn(name = "id_usuario")
-    private Usuario Usuario;
-    private String destino;
-    private int duracao;
-    private String modoDeTransporte;
-    //fazer Enum
-    private String tipoDeViagem;
+    private User User;
+    private String destination;
+    private int duration;
+    private String transport;
+    private TravelType typeOfTravel;
     private double preco;
-    //fazer Enum
-    private String status;
+    private TravelStatus TravelStatus;
     private LocalDate dataViagem;
 
 }
