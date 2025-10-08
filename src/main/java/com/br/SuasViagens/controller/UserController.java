@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/api/usuarios")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
 
     @PostMapping("/autenticar")
     public ResponseEntity autenticar(@RequestBody UserDTO userDTO){
