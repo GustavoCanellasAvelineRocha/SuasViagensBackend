@@ -11,16 +11,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.time.LocalDate;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/api/usuarios")
 public class UserController {
 
-    private final UserService userService;
-
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
 
     @PostMapping("/autenticar")
     public ResponseEntity<?> autenticar(@RequestBody @Valid UserDTO userDTO) {
